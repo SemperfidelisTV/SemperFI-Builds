@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.SemperFIwizard" version="1.1.0" name="SemperFI Builds Wizard" provider-name="Semperfidelis">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.addon.common" version="2.0.0" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup">
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>SemperFI Builds Wizard</summary>
+        <description>
+***INSTALL BUILDS FROM SEMPERFIDELIS ***
+        </description>
+        <platform>all</platform>
+        <website></website>
+		<forum></forum>
+    </extension>
+</addon>
+
+<addon id="repository.SemperFI-Builds" name="SemperFI Builds Repository" version="2.1.1" provider-name="Semperfidelis">
+    <extension point="xbmc.addon.repository" name="schism tv repository">
+        <info compressed="false">https://raw.github.com/SemperfidelisTV/SemperFI-Builds/master/addons.xml</info>
+        <checksum>https://raw.github.com/SemperfidelisTV/SemperFI-Builds/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/SemperfidelisTV/SemperFI-Builds/raw/master/zips</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>This is used FOR BUILDS ONLY</summary>
+        <description>BUILDS ONLY FROM SEMPERFIDELIS - THIS REPO CONTAINS UPDATES FOR SEMPERFIDELIS TV BUILDS THAT ARE ALLWAYS LOYAL. </description>
+        </description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="script.module.addon.common"
+	     name="Common addon methods"
+	     version="2.0.0"
+	     provider-name="Eldorado (original: t0mm0)">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Collection of commonly used addon routines</summary>
+    <description lang="en">Collection of commonly used addon routines to simplify addon development.</description>
+    <disclaimer lang="en"></disclaimer>
+    <language></language>
+    <platform>all</platform>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <forum></forum>
+    <website></website>
+    <email></email>
+    <source></source>
+  </extension>
+</addon>
+
+<addon id="script.module.urlresolver"
+     name="URLResolver"
+     version="2.10.10"
+     provider-name="Eldorado">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.t0mm0.common" version="2.0.0"/>
+    <import addon="script.module.simplejson" version="3.3.0"/>
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Resolve common video host URL's to be playable in XBMC/Kodi.</summary>
+    <description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
+  </extension>
+</addon>
+</addons>

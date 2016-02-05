@@ -1,0 +1,14 @@
+------------------------
+[COLOR green]Kodiflix update 0.15.5 (optional)[/COLOR]
+------------------------
+Some simple shortcuts added to the menu bar
+- one click repo installs
+- system short cuts
+
+
+------------------------
+[COLOR green]SemperFI "kodiflix" TV Build  (optional)[/COLOR]
+------------------------
+
+RELEASE 2.00
+- Fix Icons in Jarvis
