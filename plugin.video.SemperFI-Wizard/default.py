@@ -16,7 +16,7 @@ import ntpath
 addon_id = 'plugin.video.SemperFI-Wizard'
 ADDON = xbmcaddon.Addon(id=addon_id)
 AddonID='plugin.video.SemperFI-Wizard'
-AddonTitle="SemperFI Wizard
+AddonTitle="SemperFI-Wizard"
 dialog       =  xbmcgui.Dialog()
 net = Net()
 HOME         =  xbmc.translatePath('special://home/')
@@ -29,7 +29,7 @@ VERSION = "1.1.0"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "SemperFI Wizard"            
-BASEURL = "http://Semperfidelis.netai.net"
+BASEURL = ""
 H = 'http://'
 skin         =  xbmc.getSkinDir()
 EXCLUDES     = ['backupdir','plugin.video.SemperFI-Wizard','script.module.addon.common','repository.SemperFI-Builds','backup','backup.zip']
@@ -449,7 +449,7 @@ def INDEX():
 	addDir('[COLOR gold][B][/B][/COLOR]','url',11,ART+'tool.png',FANART,'')
 
 def UPDATEMENU():
-    linkupdate = OPEN_URL('https://archive.org/download/wizard.txt_20160127_0520/wizard.txt.txt').replace('\n','').replace('\r','')
+    linkupdate = OPEN_URL('https://archive.org/download/wizard_20160207_0738/wizard.txt').replace('\n','').replace('\r','')
     matchupdate = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(linkupdate)
     
     if not matchupdate:
@@ -459,7 +459,7 @@ def UPDATEMENU():
     dialog = Gui("DialogTextViewer.xml", path, header=xbmc.getLocalizedString(24036), content=text)
     dialog.doModal()	
     addDir('[COLOR red][B]FIRST Clean Addons Here[/B][/COLOR]','url',2,ART+'update.png',FANART,'')
-    link = OPEN_URL('https://archive.org/download/wizard.txt_20160127_0520/wizard.txt.txt').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://archive.org/download/wizard_20160207_0738/wizard.txt').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,90,iconimage,fanart,description)
@@ -467,14 +467,14 @@ def UPDATEMENU():
 	
 def BUILDMENU():
     
-    link = OPEN_URL('https://archive.org/download/wizard_rel/update_wiz.txt').replace('\n','').replace('\r','')
+    link = OPEN_URL('https://archive.org/download/wizard_20160207_0738/wizard.txt').replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
         addDir(name,url,90,iconimage,fanart,description)
     setView('movies', 'MAIN')
 
 def UPDATER():
-    linkupdate = OPEN_URL('https://archive.org/download/wizard.txt_20160127_0520/wizard.txt.txt').replace('\n','').replace('\r','')
+    linkupdate = OPEN_URL('https://archive.org/download/wizard_20160207_0738/wizard.txt').replace('\n','').replace('\r','')
     matchupdate = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(linkupdate)
     
     if not matchupdate:
@@ -510,7 +510,7 @@ def UPDATER():
 	
        
 def UPDATEUSERDATA():
-    linkupdate = OPEN_URL('https://archive.org/download/wizard.txt_20160127_0520/wizard.txt.txt').replace('\n','').replace('\r','')
+    linkupdate = OPEN_URL('https://archive.org/download/wizard_20160207_0738/wizard.txt').replace('\n','').replace('\r','')
     matchupdate = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(linkupdate)
     if not matchupdate:
 	dialog = xbmcgui.Dialog()
@@ -547,7 +547,7 @@ def UPDATEUSERDATA():
 	
 	
 def WIZARDCHECK():
-    linkupdate = OPEN_URL('https://archive.org/download/wizard.txt_20160127_0520/wizard.txt.txt').replace('\n','').replace('\r','')
+    linkupdate = OPEN_URL('https://archive.org/download/wizard_20160207_0738/wizard.txt').replace('\n','').replace('\r','')
     matchupdate = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(linkupdate)
     if not matchupdate:
 		dialog = xbmcgui.Dialog()
@@ -557,7 +557,7 @@ def WIZARDCHECK():
     
 	
 def WIZARDUPDATE():
-    linkupdate = OPEN_URL('https://archive.org/download/wizard.txt_20160127_0520/wizard.txt.txt').replace('\n','').replace('\r','')
+    linkupdate = OPEN_URL('https://archive.org/download/wizard_20160207_0738/wizard.txt').replace('\n','').replace('\r','')
     matchupdate = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(linkupdate)
     # if skin!= "skin.confluence":
 	# dialog = xbmcgui.Dialog()
